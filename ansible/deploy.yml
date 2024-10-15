@@ -9,7 +9,7 @@
     - name: Start new container
       docker_container:
         name: my_app
-        image: "pragadesh007/pragadesh007/testing_pipeline:latest"
+        image: "pragadesh007/testing_pipeline:latest"
         state: started
         ports:
           - "80:8000"
