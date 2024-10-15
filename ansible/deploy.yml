@@ -1,0 +1,15 @@
+- hosts: webservers
+  tasks:
+    - name: Stop existing container (if running)
+      docker_container:
+        name: my_app
+        state: absent
+        force_kill: true
+
+    - name: Start new container
+      docker_container:
+        name: my_app
+        image: "pragadesh007/pragadesh007/testing_pipeline:latest"
+        state: started
+        ports:
+          - "80:8000"
