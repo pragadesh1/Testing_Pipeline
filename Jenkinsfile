@@ -3,6 +3,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "pragadesh007/testing_pipeline"
+    ANSIBLE_HOST_KEY_CHECKING = 'False'
   }
 
   stages {
